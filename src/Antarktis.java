@@ -18,24 +18,52 @@ public class Antarktis extends Maze {
         closeFrame();
     }
 
-   // private static void gameLoop() {
-    //    while (false) {
+    private static void gameLoop() {
+       while (false) {
 // TODO maybe
-            //draw();
+           //TODO reach draw
+            draw();
 // TODO maybe
-     //       currentEvent = NOTHING;
+            currentEvent = NOTHING;
+            //TODO listen to keyboard
+            moveAll();
+           currentEvent = NOTHING;
+            }
 // TODO maybe
-     //   }
-  // }
+       }
+
 
     private static void moveAll() {
-// TODO
-    }
+        //may depend from keyboard input currentEvent
+        if (currentEvent == UP){  playerPenguin.move(playerPenguin.x, playerPenguin.y+1);}
+        if (currentEvent == DOWN){  playerPenguin.move(playerPenguin.x, playerPenguin.y-1);}
+        if (currentEvent == LEFT){  playerPenguin.move(playerPenguin.x-1, playerPenguin.y);}
+        if (currentEvent == LEFT){  playerPenguin.move(playerPenguin.x+1, playerPenguin.y);}
 
-    /**
-     * Example Setup for easier Testing during development
+        for (Whale wh : whales){
+            wh.move();
+            //TODO animals are eaten during movement
+        }
+        for (LeopardSeal ls : leopardSeals){
+            ls.move();
+        }
+
+        lostPenguin.move();
+
+        for (Fish fish : fishes){
+            fish.move();
+        }
+        //Fish fish = new Fish();
+        //fish.move();
+        //LeopardSeal ls =  new LeopardSeal();
+    }
+// TODO
+
+        /**
+         * Example Setup for e
+    }asier Testing during development
      */
-    private static void setupMaze() {
+    private static void setupMaze(){
         int[] pos;
         playerPenguin = new PlayerPenguin(3, 3);
         antarktis[3][3] = playerPenguin;
