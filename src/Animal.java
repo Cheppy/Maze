@@ -29,11 +29,13 @@ public abstract class Animal {
 
     public void move() {
         var a = antarktis;
+       // PlayerPenguin player = new PlayerPenguin();
         int[][] movePriority = getMovementPriority();
 
         for (int[] xy : movePriority) {
             int nextX = (this.x + xy[0]) % a[0].length;
             int nextY = (this.y + xy[1]) % a.length;
+            //player.move(nextX, nextY);
             if (this.canEat(a[nextX][nextY])) {
                 a[x][y] = null;
                 this.x = nextX;
