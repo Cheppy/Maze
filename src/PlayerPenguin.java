@@ -5,14 +5,23 @@ public class PlayerPenguin extends Penguin {
         super(x, y);
     }
     public boolean move(int newX, int newY) {
+        Penguin lostP;
+        try {
+             lostP = (Penguin) antarktis[newX][newY];
+        } catch (ClassCastException e) {
 
-        antarktis[newX][newY] = this;
-        //and delete in old spot
-        if (antarktis[newX][newY].canEat(this)||antarktis[newX][newY]==null)//lostPenguin
-        {
-            return false;
+             lostP = null;
+
+        }
+        antarktis[x][y] = null;
+
+
+        if (antarktis[newX][newY].canEat(this)||lostP!=null)
+        {    antarktis[newX][newY] = this;
+            return true;
         }
 
+        antarktis[newX][newY] = this;
         return false;
     }
 
