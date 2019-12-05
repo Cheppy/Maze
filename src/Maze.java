@@ -1,5 +1,4 @@
-Пакет 5
-package pgdp.oop;
+// package pgdp.oop;
 
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -14,7 +13,7 @@ import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Maze extends MiniJava {
+public class Maze {
     public static boolean draw = true;
 
     protected static final int NOTHING = -1;
