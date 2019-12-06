@@ -15,7 +15,7 @@ public abstract class Animal {
     static String filename;
     protected File f;
     protected Image image;
-
+    protected boolean alive;
     protected static Animal[][] antarktis;
 
     public Animal(int x, int y) {
@@ -33,13 +33,20 @@ public abstract class Animal {
         int[][] movePriority = getMovementPriority();
 
         for (int[] xy : movePriority) {
+
             int nextX = (this.x + xy[0]) % a[0].length;
+            if (nextX <0) nextX =41;
             int nextY = (this.y + xy[1]) % a.length;
+            if (nextX <0) nextY =41;
+
+
             //player.move(nextX, nextY);
             if (this.canEat(a[nextX][nextY])) {
+                a[nextX][nextY].alive=false;
                 a[x][y] = null;
                 this.x = nextX;
                 this.y = nextY;
+                a[nextX][nextY] = this;
             }
 
         }
