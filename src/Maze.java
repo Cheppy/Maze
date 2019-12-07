@@ -75,7 +75,7 @@ public class Maze {
 
         frame = new JFrame("A-Maze-Ing");
         frame.getContentPane().add(content);
-        frame.setSize(400, 400 * (antarktis[0].length) / (antarktis.length));
+        frame.setSize(1024, 1024* (antarktis[0].length) / (antarktis.length));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         frame.addComponentListener(new ComponentAdapter() {

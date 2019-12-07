@@ -1,7 +1,5 @@
 //package pgdp.oop;
 
-import java.awt.event.WindowEvent;
-
 public class Antarktis extends Maze {
     private static int width, height;
     private static Penguin lostPenguin;
@@ -10,35 +8,57 @@ public class Antarktis extends Maze {
     private static Fish[] fishes = new Fish[500];
     private static PlayerPenguin playerPenguin;
 
+
     public static void main(String[] args) {
         width = 41;
         height = 41;
         antarktis = generateMaze(width, height);
+        setupMaze();
+        gameLoop();
 // Close the opnend frame
         closeFrame();
     }
 
     private static void gameLoop() {
-       while (false) {
-// TODO maybe
-           //TODO reach draw
-            draw();
-// TODO maybe
-            currentEvent = NOTHING;
+       while (true) {
+           if (!lostPenguin.isAlive()){
+               System.out.println("Lost penguin died");
+               return;
+           }
+           if (!playerPenguin.isAlive()) {
+               System.out.println("player penguin died");
+               return;
+           }
             //TODO listen to keyboard
+           if (playerMoved())
             moveAll();
-           currentEvent = NOTHING;
-            }
+
+           if (playerPenguin.didFindPenguin())
+           {
+               System.out.println("Player found the penguin");
+               return;
+           }
+           draw();
+
+       }
 // TODO maybe
        }
 
+       private static boolean playerMoved() {
+           //may depend from keyboard input currentEvent
+           var e = currentEvent;
+           currentEvent = NOTHING;
+           if (e == DOWN){  playerPenguin.move(playerPenguin.x, playerPenguin.y+1);return true;}
+           if (e == UP){  playerPenguin.move(playerPenguin.x, playerPenguin.y-1); return true;}
+           if (e == LEFT){  playerPenguin.move(playerPenguin.x-1, playerPenguin.y);return true;}
+           if (e == RIGHT){  playerPenguin.move(playerPenguin.x+1, playerPenguin.y);return true;}
+           return false;
+
+       }
 
     private static void moveAll() {
         //may depend from keyboard input currentEvent
-        if (currentEvent == UP){  playerPenguin.move(playerPenguin.x, playerPenguin.y+1);}
-        if (currentEvent == DOWN){  playerPenguin.move(playerPenguin.x, playerPenguin.y-1);}
-        if (currentEvent == LEFT){  playerPenguin.move(playerPenguin.x-1, playerPenguin.y);}
-        if (currentEvent == LEFT){  playerPenguin.move(playerPenguin.x+1, playerPenguin.y);}
+
 
         for (Whale wh : whales){
             wh.move();
@@ -85,5 +105,6 @@ public class Antarktis extends Maze {
         }
         antarktis[20][20] = new Penguin(20, 20);
         lostPenguin = (Penguin) antarktis[20][20];
+        Animal.setAntarktis(antarktis);
     }
 }

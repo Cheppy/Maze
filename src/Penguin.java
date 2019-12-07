@@ -1,10 +1,14 @@
 //package pgdp.oop;
 
-import java.awt.Toolkit;
+import java.awt.*;
 import java.io.File;
 
 public class Penguin extends Animal {
   static String filename = "tux.png";
+
+  public boolean isAlive() {
+    return alive;
+  }
 
   public Penguin(int x, int y) {
     super(x, y);
@@ -16,6 +20,10 @@ public class Penguin extends Animal {
   public boolean canEat(Animal animal) {
     return animal.eatenBy(this);
   }
+
+
+  @Override
+  protected Color getColor() {return Color.cyan;}
 
   @Override
   protected boolean eatenBy(Penguin penguin) {
@@ -29,12 +37,12 @@ public class Penguin extends Animal {
 
   @Override
   protected boolean eatenBy(Whale whale) {
-    return false;
+    return true;
   }
 
   @Override
   protected boolean eatenBy(LeopardSeal leopardSeal) {
-    return false;
+    return true;
   }
 
   @Override

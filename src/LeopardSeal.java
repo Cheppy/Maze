@@ -1,6 +1,6 @@
 //package pgdp.oop;
 
-import java.awt.Toolkit;
+import java.awt.*;
 import java.io.File;
 
 public class LeopardSeal extends Animal {
@@ -13,9 +13,12 @@ f = new File(filename);
 image = Toolkit.getDefaultToolkit().getImage(f.getAbsolutePath());
 }
 
-public boolean canEat(Animal animal) {
-return animal.eatenBy(this);
-}
+    @Override
+    protected Color getColor() {return Color.pink;}
+
+    public boolean canEat(Animal animal) {
+        return animal.eatenBy(this);
+    }
 
     @Override
     protected boolean eatenBy(Penguin penguin) {
@@ -29,7 +32,7 @@ return animal.eatenBy(this);
 
     @Override
     protected boolean eatenBy(Whale whale) {
-        return false;
+        return true;
     }
 
     @Override
