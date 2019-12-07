@@ -48,12 +48,12 @@ public abstract class Animal {
 
     public void move() {
         var a = antarktis;
-       // PlayerPenguin player = new PlayerPenguin();
+        // PlayerPenguin player = new PlayerPenguin();
         int[][] movePriority = getMovementPriority();
 
         for (int[] xy : movePriority) {
-            int nextX = clampCoordX(this.x +xy[0]);
-            int nextY = clampCoordY(this.y +xy[1]);
+            int nextX = clampCoordX(this.x + xy[0]);
+            int nextY = clampCoordY(this.y + xy[1]);
 //            System.out.println("thx: thY:" + this.x+ " " + this.y+ "x: Y:" + nextX+ " " + nextY);
 //            int nextX = (this.x + xy[0]) % a[0].length;
 //            int nextY = (this.y + xy[1]) % a.length;
@@ -65,7 +65,7 @@ public abstract class Animal {
             if (a[nextX][nextY] != null && this.canEat(a[nextX][nextY])) {
                 a[nextX][nextY].killAnimal();
                 shouldMove = true;
-            // move to an empty space
+                // move to an empty space
             } else if (a[nextX][nextY] == null) {
                 shouldMove = true;
             }
@@ -77,6 +77,7 @@ public abstract class Animal {
                 this.y = nextY;
 
                 // System.out.print(this + " Moved\n");
+                return;
             }
 
         }

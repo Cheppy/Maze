@@ -14,7 +14,7 @@ image = Toolkit.getDefaultToolkit().getImage(f.getAbsolutePath());
 }
 
     @Override
-    protected Color getColor() {return Color.pink;}
+    protected Color getColor() {return Color.red;}
 
     public boolean canEat(Animal animal) {
         return animal.eatenBy(this);
