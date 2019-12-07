@@ -2,6 +2,7 @@
 
 import java.awt.event.WindowEvent;
 
+
 public class Antarktis extends Maze {
     private static int width, height;
     private static Penguin lostPenguin;
@@ -18,39 +19,65 @@ public class Antarktis extends Maze {
         closeFrame();
     }
 
+
+
+    static boolean gameisGO = true;
+
     private static void gameLoop() {
-       while (false) {
-// TODO maybe
-           //TODO reach draw
-            draw();
-// TODO maybe
-            currentEvent = NOTHING;
-            //TODO listen to keyboard
-            moveAll();
-           currentEvent = NOTHING;
+        //  int [][] getCurrentEventState = new int[][]{new int[]{0,0},{-1, 0}, {0, 1}, {1, 0}, {0, -1}};;
+        while (!gameisGO && playerPenguin.alive && lostPenguin.alive ) {
+//  while (true) {
+
+            // TODO maybe
+            if (currentEvent == UP) {
+                gameisGO = playerPenguin.move(playerPenguin.x, playerPenguin.y + 1);
+            } else if (currentEvent == DOWN) {
+                gameisGO = playerPenguin.move(playerPenguin.x, playerPenguin.y - 1);
+            } else if (currentEvent == LEFT) {
+                gameisGO = playerPenguin.move(playerPenguin.x - 1, playerPenguin.y);
+            } else if (currentEvent == RIGHT) {
+                gameisGO = playerPenguin.move(playerPenguin.x + 1, playerPenguin.y);
             }
+
+            moveAll();
+
+            
+
+            draw();
+
+            currentEvent = NOTHING;
+        }
+    }
 // TODO maybe
-       }
+
 
 
     private static void moveAll() {
         //may depend from keyboard input currentEvent
-        if (currentEvent == UP){  playerPenguin.move(playerPenguin.x, playerPenguin.y+1);}
-        if (currentEvent == DOWN){  playerPenguin.move(playerPenguin.x, playerPenguin.y-1);}
-        if (currentEvent == LEFT){  playerPenguin.move(playerPenguin.x-1, playerPenguin.y);}
-        if (currentEvent == LEFT){  playerPenguin.move(playerPenguin.x+1, playerPenguin.y);}
+        if (currentEvent == UP) {
+            playerPenguin.move(playerPenguin.x, playerPenguin.);
+        }
+        if (currentEvent == DOWN) {
+            playerPenguin.move(playerPenguin.x, playerPenguin.y - 1);
+        }
+        if (currentEvent == LEFT) {
+            playerPenguin.move(playerPenguin.x - 1, playerPenguin.y);
+        }
+        if (currentEvent == LEFT) {
+            playerPenguin.move(playerPenguin.x + 1, playerPenguin.y);
+        }
 
-        for (Whale wh : whales){
+        for (Whale wh : whales) {
             wh.move();
             //TODO animals are eaten during movement
         }
-        for (LeopardSeal ls : leopardSeals){
+        for (LeopardSeal ls : leopardSeals) {
             ls.move();
         }
 
         lostPenguin.move();
 
-        for (Fish fish : fishes){
+        for (Fish fish : fishes) {
             fish.move();
         }
         //Fish fish = new Fish();
@@ -59,11 +86,11 @@ public class Antarktis extends Maze {
     }
 // TODO
 
-        /**
-         * Example Setup for e
-    }asier Testing during development
+    /**
+     * Example Setup for e
+     * }asier Testing during development
      */
-    private static void setupMaze(){
+    private static void setupMaze() {
         int[] pos;
         playerPenguin = new PlayerPenguin(3, 3);
         antarktis[3][3] = playerPenguin;

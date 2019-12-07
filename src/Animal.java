@@ -29,7 +29,7 @@ public abstract class Animal {
 
     public void move() {
         var a = antarktis;
-       // PlayerPenguin player = new PlayerPenguin();
+       //PlayerPenguin player = new PlayerPenguin();
         int[][] movePriority = getMovementPriority();
 
         for (int[] xy : movePriority) {
@@ -37,7 +37,7 @@ public abstract class Animal {
             int nextX = (this.x + xy[0]) % a[0].length;
             if (nextX <0) nextX =41;
             int nextY = (this.y + xy[1]) % a.length;
-            if (nextX <0) nextY =41;
+            if (nextY <0) nextY =41;
 
 
             //player.move(nextX, nextY);

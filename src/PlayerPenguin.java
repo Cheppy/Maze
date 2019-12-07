@@ -7,7 +7,7 @@ public class PlayerPenguin extends Penguin {
     public boolean move(int newX, int newY) {
         Penguin lostP;
         try {
-             lostP = (Penguin) antarktis[newX][newY];
+           lostP = (Penguin) antarktis[newX][newY];
         } catch (ClassCastException e) {
 
              lostP = null;
@@ -22,7 +22,7 @@ public class PlayerPenguin extends Penguin {
         }
 
         antarktis[newX][newY] = this;
-        return false;
+      return false;
     }
 
     public boolean canEat(Animal animal) {
