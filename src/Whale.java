@@ -1,7 +1,7 @@
 
 //package pgdp.oop;
 
-import java.awt.Toolkit;
+import java.awt.*;
 import java.io.File;
 
 public class Whale extends Animal {
@@ -14,10 +14,10 @@ public class Whale extends Animal {
     image = Toolkit.getDefaultToolkit().getImage(f.getAbsolutePath());
   }
 
+
   public boolean canEat(Animal animal) {
     return animal.eatenBy(this);
   }
-
   @Override
   protected boolean eatenBy(Penguin penguin) {
     return false;
@@ -42,4 +42,9 @@ public class Whale extends Animal {
   protected boolean eatenBy(Fish fish) {
     return false;
   }
+
+
+
+  @Override
+  protected Color getColor() {return Color.orange;}
 }

@@ -1,49 +1,49 @@
 
 //package pgdp.oop;
 
-import java.awt.Toolkit;
+import java.awt.*;
 import java.io.File;
 
 public class Fish extends Animal {
-static String filename = "fish.png";
+    static String filename = "fish.png";
 
-public Fish(int x, int y) {
-super(x, y);
+    public Fish(int x, int y) {
+        super(x, y);
 
-f = new File(filename);
-image = Toolkit.getDefaultToolkit().getImage(f.getAbsolutePath());
-}
-    @Override
-    protected int[][] getMovementPriority() {
-        return new int[][]{new int[]{0, -1},{1, 0},{0, 1},{-1, 0}};
+        f = new File(filename);
+        image = Toolkit.getDefaultToolkit().getImage(f.getAbsolutePath());
     }
 
+    @Override
+    protected int[][] getMovementPriority() {
+        return new int[][] { new int[] { 0, -1 }, { 1, 0 }, { 0, 1 }, { -1, 0 } };
+    }
 
+    @Override
+    protected Color getColor() {return Color.blue;}
 
-
-public boolean
-canEat(Animal animal) {
-return animal.eatenBy(this);
-}
+    public boolean canEat(Animal animal) {
+        return animal.eatenBy(this);
+    }
 
     @Override
     protected boolean eatenBy(Penguin penguin) {
-        return false;
+        return true;
     }
 
     @Override
     protected boolean eatenBy(PlayerPenguin playerPenguin) {
-        return false;
+        return true;
     }
 
     @Override
     protected boolean eatenBy(Whale whale) {
-        return false;
+        return true;
     }
 
     @Override
     protected boolean eatenBy(LeopardSeal leopardSeal) {
-        return false;
+        return true;
     }
 
     @Override

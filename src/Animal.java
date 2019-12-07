@@ -15,7 +15,12 @@ public abstract class Animal {
     static String filename;
     protected File f;
     protected Image image;
-    protected boolean alive;
+
+
+    boolean alive = true;//added
+    void killAnimal() { alive = false;}//added
+    public boolean isAlive() {return alive;}
+
     protected static Animal[][] antarktis;
 
     public Animal(int x, int y) {
@@ -26,27 +31,52 @@ public abstract class Animal {
     protected int[][] getMovementPriority() {
         return new int[][]{new int[]{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
     }
+    //added
+    protected int clampCoordX(int x) {
+        var a = antarktis;
+        int next = x % a[0].length;
+        if (next < 0) next = a[0].length + next; //added
+        return next;
+    }
+    //added
+    protected int clampCoordY(int y) {
+        var a = antarktis;
+        int next = y % a.length;
+        if (next < 0) next = a.length + next; //added
+        return next;
+    }
 
     public void move() {
         var a = antarktis;
-       //PlayerPenguin player = new PlayerPenguin();
+       // PlayerPenguin player = new PlayerPenguin();
         int[][] movePriority = getMovementPriority();
 
         for (int[] xy : movePriority) {
+            int nextX = clampCoordX(this.x +xy[0]);
+            int nextY = clampCoordY(this.y +xy[1]);
+//            System.out.println("thx: thY:" + this.x+ " " + this.y+ "x: Y:" + nextX+ " " + nextY);
+//            int nextX = (this.x + xy[0]) % a[0].length;
+//            int nextY = (this.y + xy[1]) % a.length;
+//
+//            if (nextX < 0) nextX = a[0].length + nextX; //added
+//            if (nextY < 0) nextY = a.length + nextY; //added
+            boolean shouldMove = false;
+            // do a null check before checking if it can eat this thing
+            if (a[nextX][nextY] != null && this.canEat(a[nextX][nextY])) {
+                a[nextX][nextY].killAnimal();
+                shouldMove = true;
+            // move to an empty space
+            } else if (a[nextX][nextY] == null) {
+                shouldMove = true;
+            }
 
-            int nextX = (this.x + xy[0]) % a[0].length;
-            if (nextX <0) nextX =41;
-            int nextY = (this.y + xy[1]) % a.length;
-            if (nextY <0) nextY =41;
-
-
-            //player.move(nextX, nextY);
-            if (this.canEat(a[nextX][nextY])) {
-                a[nextX][nextY].alive=false;
+            if (shouldMove) {
+                a[nextX][nextY] = this;
                 a[x][y] = null;
                 this.x = nextX;
                 this.y = nextY;
-                a[nextX][nextY] = this;
+
+                // System.out.print(this + " Moved\n");
             }
 
         }
@@ -79,13 +109,19 @@ public abstract class Animal {
                 (int) (height * 0.5));
     }
 
+    protected Color getColor() {return Color.yellow;}
+
     public void draw(Graphics g, int height, int width) {
-        if (image == null) {
-            paintSymbol(g, Color.YELLOW, height, width);
-            return;
-        }
-        ((Graphics2D) g).drawImage(image, 0, 0, width, height, 0, 0, image.getWidth(null),
-                image.getHeight(null), null);
+        if (!isAlive()) return;
+        // strictly to check if the animal is drawn here
+        paintSymbol(g, getColor(), height, width);
+        return;
+//        if (image == null) {
+//            paintSymbol(g, Color.YELLOW, height, width);
+//            return;
+//        }
+//        ((Graphics2D) g).drawImage(image, 0, 0, width, height, 0, 0, image.getWidth(null),
+//                image.getHeight(null), null);
 
     }
 }
