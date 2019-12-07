@@ -38,7 +38,7 @@ public class Fish extends Animal {
 
     @Override
     protected boolean eatenBy(Whale whale) {
-        return true;
+        return false;
     }
 
     @Override
