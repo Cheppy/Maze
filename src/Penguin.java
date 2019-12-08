@@ -22,8 +22,8 @@ public class Penguin extends Animal {
   }
 
 
-  @Override
-  protected Color getColor() {return Color.cyan;}
+ // @Override
+  //protected Color getColor() {return Color.cyan;}
 
   @Override
   protected boolean eatenBy(Penguin penguin) {

@@ -5,7 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Antarktis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Antarktis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LeopardSeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeopardSeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Penguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Penguin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayerPenguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerPenguin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Whale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Whale.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +22,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>antarktis</find>
-      <find>alive</find>
-      <find>whales</find>
-      <find>playerPenguin</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,22 +100,22 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="1085" y="414" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1410@0.0.2560.1410" timestamp="1575561205068" />
-    <state width="2009" height="309" key="GridCell.Tab.0.bottom" timestamp="1575757047199">
+    <state width="2009" height="309" key="GridCell.Tab.0.bottom" timestamp="1575766871173">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2009" height="309" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1575757047199" />
-    <state width="2009" height="309" key="GridCell.Tab.0.center" timestamp="1575757047199">
+    <state width="2009" height="309" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1575766871173" />
+    <state width="2009" height="309" key="GridCell.Tab.0.center" timestamp="1575766871172">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2009" height="309" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1575757047199" />
-    <state width="2009" height="309" key="GridCell.Tab.0.left" timestamp="1575757047199">
+    <state width="2009" height="309" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1575766871172" />
+    <state width="2009" height="309" key="GridCell.Tab.0.left" timestamp="1575766871172">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2009" height="309" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1575757047199" />
-    <state width="2009" height="309" key="GridCell.Tab.0.right" timestamp="1575757047199">
+    <state width="2009" height="309" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1575766871172" />
+    <state width="2009" height="309" key="GridCell.Tab.0.right" timestamp="1575766871173">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2009" height="309" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1575757047199" />
+    <state width="2009" height="309" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1575766871173" />
     <state x="976" y="528" key="com.intellij.ide.util.TipDialog" timestamp="1575565227882">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>

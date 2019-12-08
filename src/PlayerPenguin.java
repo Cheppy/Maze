@@ -64,6 +64,6 @@ public class PlayerPenguin extends Penguin {
     }
 
 
-    @Override
-    protected Color getColor() {return Color.black;}
+ //   @Override
+   // protected Color getColor() {return Color.black;}
 }

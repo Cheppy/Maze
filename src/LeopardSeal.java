@@ -13,8 +13,8 @@ f = new File(filename);
 image = Toolkit.getDefaultToolkit().getImage(f.getAbsolutePath());
 }
 
-    @Override
-    protected Color getColor() {return Color.red;}
+    //@Override
+    //protected Color getColor() {return Color.red;}
 
     public boolean canEat(Animal animal) {
         return animal.eatenBy(this);

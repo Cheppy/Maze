@@ -19,7 +19,7 @@ public class Fish extends Animal {
         return new int[][] { new int[] { 0, -1 }, { 1, 0 }, { 0, 1 }, { -1, 0 } };
     }
 
-    @Override
+  //  @Override
     protected Color getColor() {return Color.blue;}
 
     public boolean canEat(Animal animal) {

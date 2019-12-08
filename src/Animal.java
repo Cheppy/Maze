@@ -16,17 +16,16 @@ public abstract class Animal {
     protected File f;
     protected Image image;
 
-
-    boolean alive = true;//added
-    void killAnimal() { alive = false;}//added
-    public boolean isAlive() {return alive;}
-
     protected static Animal[][] antarktis;
 
     public Animal(int x, int y) {
         this.x = x;
         this.y = y;
     }
+
+    boolean alive = true;//added
+    void killAnimal() { alive = false;}//added
+    public boolean isAlive() {return alive;}
 
     protected int[][] getMovementPriority() {
         return new int[][]{new int[]{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
@@ -82,18 +81,13 @@ public abstract class Animal {
 
         }
     }
-
-
     public abstract boolean canEat(Animal animal);
 
     protected abstract boolean eatenBy(Penguin penguin);
 
     protected abstract boolean eatenBy(PlayerPenguin playerPenguin);
-
     protected abstract boolean eatenBy(Whale whale);
-
     protected abstract boolean eatenBy(LeopardSeal leopardSeal);
-
     protected abstract boolean eatenBy(Fish fish);
 
     public static void setAntarktis(Animal[][] antarktis) {
@@ -110,19 +104,13 @@ public abstract class Animal {
                 (int) (height * 0.5));
     }
 
-    protected Color getColor() {return Color.yellow;}
-
     public void draw(Graphics g, int height, int width) {
-        if (!isAlive()) return;
-        // strictly to check if the animal is drawn here
-        paintSymbol(g, getColor(), height, width);
-        return;
-//        if (image == null) {
-//            paintSymbol(g, Color.YELLOW, height, width);
-//            return;
-//        }
-//        ((Graphics2D) g).drawImage(image, 0, 0, width, height, 0, 0, image.getWidth(null),
-//                image.getHeight(null), null);
+        if (image == null) {
+            paintSymbol(g, Color.YELLOW, height, width);
+            return;
+        }
+        ((Graphics2D) g).drawImage(image, 0, 0, width, height, 0, 0, image.getWidth(null),
+                image.getHeight(null), null);
 
     }
 }

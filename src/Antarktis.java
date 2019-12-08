@@ -62,7 +62,6 @@ public class Antarktis extends Maze {
 
         for (Whale wh : whales){
             wh.move();
-
             //TODO animals are eaten during movement
         }
         for (LeopardSeal ls : leopardSeals){
@@ -71,7 +70,7 @@ public class Antarktis extends Maze {
 
         lostPenguin.move();
 
-        for (Fish fish : fishes){ System.out.println("fish moved");
+        for (Fish fish : fishes){
             fish.move();
         }
         //Fish fish = new Fish();
