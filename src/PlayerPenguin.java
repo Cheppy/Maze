@@ -22,30 +22,26 @@ public class PlayerPenguin extends Penguin {
         try {
              lostP = (Penguin) antarktis[newX][newY];
         } catch (ClassCastException e) {
-             lostP = null;
+             lostP=null;
         }
-        boolean shouldMove = false;
+
         if (lostP != null) {
             foundPinguin = true;
-            shouldMove = true;
+
         }
 
         if (antarktis[newX][newY] == null) {
-            shouldMove = true;
+
         } else if (canEat(antarktis[newX][newY])) {
             antarktis[newX][newY].killAnimal();
-            shouldMove = true;
         }
 
-        if (shouldMove) {
             antarktis[x][y] = null;
             antarktis[newX][newY] = this;
             this.x = newX;
             this.y = newY;
-            return true;
-        }
 
-        if (!lostP.alive|| !this.alive || foundPinguin) {return true;}
+        if (lostP != null && !lostP.isAlive()|| !this.alive || foundPinguin) {return true;}
         return false;
 //
 //        antarktis[x][y] = null;
