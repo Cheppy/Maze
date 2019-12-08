@@ -67,12 +67,13 @@ public class Antarktis extends Maze {
         }
         for (LeopardSeal ls : leopardSeals){
             ls.move();
+            //System.out.println(ls.alive);
         }
 
         lostPenguin.move();
 
         for (Fish fish : fishes){
-           // System.out.println(fish.alive);
+          System.out.println(fish.alive);
             fish.move();
         }
         //Fish fish = new Fish();

@@ -20,6 +20,7 @@ image = Toolkit.getDefaultToolkit().getImage(f.getAbsolutePath());
         return animal.eatenBy(this);
     }
 
+
     @Override
     protected boolean eatenBy(Penguin penguin) {
         return false;

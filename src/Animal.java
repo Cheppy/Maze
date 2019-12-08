@@ -1,4 +1,4 @@
-//package pgdp.oop;
+// pgdp.oop;
 
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -17,7 +17,7 @@ public abstract class Animal {
     protected Image image;
 
     protected static Animal[][] antarktis;
-
+    //boolean shouldMove = false;
     public Animal(int x, int y) {
         this.x = x;
         this.y = y;
@@ -44,9 +44,11 @@ public abstract class Animal {
         int next = y % a.length;
         if (next < 0) next = a.length + next; //added
         return next;
+
     }
 
     public void move() {
+        if (!isAlive()){return;}
         var a = antarktis;
         // PlayerPenguin player = new PlayerPenguin();
         int[][] movePriority = getMovementPriority();
@@ -56,7 +58,7 @@ public abstract class Animal {
         for (int[] xy : movePriority) {
             int nextX = clampCoordX(this.x + xy[0]);
             int nextY = clampCoordY(this.y + xy[1]);
-
+            //shouldMove=true;
             if (a[nextX][nextY] != null && this.canEat(a[nextX][nextY])) {
                 a[nextX][nextY].killAnimal();
                 shouldMove = true;
@@ -71,11 +73,11 @@ public abstract class Animal {
                 // System.out.print(this + " Moved\n");
                 return;
             }
-            if (!this.alive) System.out.println(this+"dead");
+           // if (.alive) System.out.println(this+"dead");
         }
 
         //SUPERMEGANIGGAFIX
-        if (!shouldMove) { return; }
+        //if (!shouldMove) { return; }
 
         //looking for some free room at least
         for (int[] xy : movePriority) {

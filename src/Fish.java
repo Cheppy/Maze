@@ -18,12 +18,12 @@ public class Fish extends Animal {
     protected int[][] getMovementPriority() {
         return new int[][] { new int[] { 0, -1 }, { 1, 0 }, { 0, 1 }, { -1, 0 } };
     }
-    @Override
-    public void move(){
-
-    }
+   // @Override
+    //public void move(){ ;
+       // fish.move(this.x, this.y);
+  //  }
   //  @Override
-    protected Color getColor() {return Color.blue;}
+  //  protected Color getColor() {return Color.blue;}
 
     public boolean canEat(Animal animal) {
         return animal.eatenBy(this);

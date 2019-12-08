@@ -45,6 +45,5 @@ public class Whale extends Animal {
 
 
 
-//  @Override
- // protected Color getColor() {return Color.orange;}
+
 }

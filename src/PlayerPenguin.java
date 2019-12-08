@@ -45,6 +45,7 @@ public class PlayerPenguin extends Penguin {
             return true;
         }
 
+        if (!lostP.alive|| !this.alive || foundPinguin) {return true;}
         return false;
 //
 //        antarktis[x][y] = null;
