@@ -39,23 +39,28 @@ public class Antarktis extends Maze {
                return;
            }
            draw();
+
+         // currentEvent = NOTHING;
             //System.out.println(playerPenguin.alive);
 
        }
 // TODO maybe
        }
 
-       private static boolean playerMoved() {
-           //may depend from keyboard input currentEvent
-           var e = currentEvent;
-           currentEvent = NOTHING;
-           if (e == DOWN){  playerPenguin.move(playerPenguin.x, playerPenguin.y+1);return true;}
-           if (e == UP){  playerPenguin.move(playerPenguin.x, playerPenguin.y-1); return true;}
-           if (e == LEFT){  playerPenguin.move(playerPenguin.x-1, playerPenguin.y);return true;}
-           if (e == RIGHT){  playerPenguin.move(playerPenguin.x+1, playerPenguin.y);return true;}
-           return false;
 
-       }
+    private static boolean playerMoved() {
+        //may depend from keyboard input currentEvent
+        var e = currentEvent;
+        currentEvent = NOTHING;
+
+        if (e == DOWN){  playerPenguin.move(playerPenguin.x, playerPenguin.y+1);return true;}
+        if (e == UP){  playerPenguin.move(playerPenguin.x, playerPenguin.y-1); return true;}
+        if (e == LEFT){  playerPenguin.move(playerPenguin.x-1, playerPenguin.y);return true;}
+        if (e == RIGHT){  playerPenguin.move(playerPenguin.x+1, playerPenguin.y);return true;}
+        currentEvent = NOTHING;
+        return false;
+
+    }
 
     private static void moveAll() {
         //may depend from keyboard input currentEvent

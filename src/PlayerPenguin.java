@@ -14,7 +14,7 @@ public class PlayerPenguin extends Penguin {
 
     public boolean move(int newX, int newY) {
         // added
-        newX = clampCoordX(newX);
+       newX = clampCoordX(newX);
         newY = clampCoordY(newY);
         // System.out.println("new x " + newX + " new y " + newY);
 
