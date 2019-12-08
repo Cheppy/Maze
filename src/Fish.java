@@ -18,7 +18,10 @@ public class Fish extends Animal {
     protected int[][] getMovementPriority() {
         return new int[][] { new int[] { 0, -1 }, { 1, 0 }, { 0, 1 }, { -1, 0 } };
     }
+    @Override
+    public void move(){
 
+    }
   //  @Override
     protected Color getColor() {return Color.blue;}
 

@@ -22,8 +22,8 @@ public class Antarktis extends Maze {
     private static void gameLoop() {
        while (true) {
            if (!lostPenguin.isAlive()){
-               System.out.println("Lost penguin died");
-               return;
+                   System.out.println("Lost penguin died");
+                   return;
            }
            if (!playerPenguin.isAlive()) {
                System.out.println("player penguin died");
@@ -39,6 +39,7 @@ public class Antarktis extends Maze {
                return;
            }
            draw();
+            //System.out.println(playerPenguin.alive);
 
        }
 // TODO maybe
@@ -71,6 +72,7 @@ public class Antarktis extends Maze {
         lostPenguin.move();
 
         for (Fish fish : fishes){
+           // System.out.println(fish.alive);
             fish.move();
         }
         //Fish fish = new Fish();

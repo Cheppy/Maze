@@ -6,10 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Antarktis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Antarktis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeopardSeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeopardSeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Penguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Penguin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlayerPenguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerPenguin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Whale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Whale.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,26 +92,26 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="590" y="366" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1575560210207" />
-    <state x="1085" y="414" key="#com.intellij.ide.util.MemberChooser" timestamp="1575561205068">
+    <state x="1085" y="414" key="#com.intellij.ide.util.MemberChooser" timestamp="1575808135190">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="1085" y="414" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1410@0.0.2560.1410" timestamp="1575561205068" />
-    <state width="2009" height="309" key="GridCell.Tab.0.bottom" timestamp="1575766871173">
+    <state x="1085" y="414" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1410@0.0.2560.1410" timestamp="1575808135190" />
+    <state width="2009" height="309" key="GridCell.Tab.0.bottom" timestamp="1575808747852">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2009" height="309" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1575766871173" />
-    <state width="2009" height="309" key="GridCell.Tab.0.center" timestamp="1575766871172">
+    <state width="2009" height="309" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1575808747852" />
+    <state width="2009" height="309" key="GridCell.Tab.0.center" timestamp="1575808747852">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2009" height="309" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1575766871172" />
-    <state width="2009" height="309" key="GridCell.Tab.0.left" timestamp="1575766871172">
+    <state width="2009" height="309" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1575808747852" />
+    <state width="2009" height="309" key="GridCell.Tab.0.left" timestamp="1575808747852">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2009" height="309" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1575766871172" />
-    <state width="2009" height="309" key="GridCell.Tab.0.right" timestamp="1575766871173">
+    <state width="2009" height="309" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1575808747852" />
+    <state width="2009" height="309" key="GridCell.Tab.0.right" timestamp="1575808747852">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2009" height="309" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1575766871173" />
+    <state width="2009" height="309" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1575808747852" />
     <state x="976" y="528" key="com.intellij.ide.util.TipDialog" timestamp="1575565227882">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
